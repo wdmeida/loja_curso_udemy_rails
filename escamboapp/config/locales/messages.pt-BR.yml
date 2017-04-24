@@ -1,0 +1,15 @@
+'pt-BR':
+  messages:
+    confirm: Tem certeza?
+    confirm_with: Você deseja realmente excluir (<strong>%{item}</strong>)?
+    listing: Listando %{model}
+    editing: Editando %{model}
+    new: Novo %{model}
+    errors: ocorreram...
+    created: Item criado com sucesso!
+    created_with: Item (<strong>%{item}</strong>) criado com sucesso!
+    updated: Item atualizado com sucesso!
+    updated_with: Item (<strong>%{item}</strong>) atualizado com sucesso!
+    destroyed: Item excluído com sucesso!
+    destroyed_with: Item (<strong>%{item}</strong>) excluído com sucesso!
+    access_denied: Você não está autorizado a executar essa ação.
