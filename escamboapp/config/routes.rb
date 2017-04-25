@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   get 'backoffice', to: 'backoffice/dashboard#index'
   
   namespace :backoffice do
-    # Cria os recursos para categorias, exceto para show.
+    resources :admins, except: [:show]  
     resources :categories, except: [:show, :destroy]
-    resources :admins, except: [:show]
+    resources :send_mail, only: [:edit, :create]
     get 'dashboard', to: 'dashboard#index'
   end
 

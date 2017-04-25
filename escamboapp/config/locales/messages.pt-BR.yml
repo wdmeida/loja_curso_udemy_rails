@@ -13,3 +13,4 @@
     destroyed: Item excluído com sucesso!
     destroyed_with: Item (<strong>%{item}</strong>) excluído com sucesso!
     access_denied: Você não está autorizado a executar essa ação.
+    send_mail_success: Email enviado com sucesso!

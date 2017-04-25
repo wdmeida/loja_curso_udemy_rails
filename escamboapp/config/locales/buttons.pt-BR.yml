@@ -1,1 +1,4 @@
 'pt-BR':
+  buttons:
+    send_message: Enviar mensagem
+    close: Fechar

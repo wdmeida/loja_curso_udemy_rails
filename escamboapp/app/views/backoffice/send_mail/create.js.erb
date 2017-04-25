@@ -1,0 +1,12 @@
+$(function() {
+	
+	// Hide modal,	
+	$('#sendMailModal').modal('hide');	
+	
+	// Clean the contents of inputs.
+	$('#subject-text').val('');
+	$('#message-text').val('');
+
+	// Set notification message.
+	$.notify('<%= t('messages.send_mail.success') %>', 'success');
+});
