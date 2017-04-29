@@ -94,12 +94,13 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.1.0)
+    lerolero_generator (1.0.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mail (2.6.4)
+    mail (2.6.5)
       mime-types (>= 1.16, < 4)
     mailcatcher (0.2.4)
       eventmachine
@@ -242,6 +243,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.5)
   jquery-rails
+  lerolero_generator
   listen (~> 3.0.5)
   mailcatcher
   puma (~> 3.0)
@@ -253,7 +255,6 @@ DEPENDENCIES
   rails-erd
   rails-i18n
   sass-rails (~> 5.0)
-  sinatra (= 2.0.0.beta2)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

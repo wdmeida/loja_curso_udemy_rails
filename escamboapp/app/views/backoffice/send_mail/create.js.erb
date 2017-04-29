@@ -8,5 +8,5 @@ $(function() {
 	$('#message-text').val('');
 
 	// Set notification message.
-	$.notify('<%= t('messages.send_mail.success') %>', 'success');
+	$.notify('<%= @notify_message %>', '<%= @notify_flag %>');
 });

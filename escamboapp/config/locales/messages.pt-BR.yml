@@ -14,3 +14,4 @@
     destroyed_with: Item (<strong>%{item}</strong>) excluído com sucesso!
     access_denied: Você não está autorizado a executar essa ação.
     send_mail_success: Email enviado com sucesso!
+    send_mail_error: Erro ao enviar email. Tente novamente!

@@ -1,0 +1,4 @@
+'pt-BR':
+  flags:
+    error: error
+    success: success
