@@ -64,6 +64,20 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # RSpec for Rails-3
+  gem 'rspec-rails', '~> 3.5'
+  # A library for generating fake data such as names, addresses, and phone numbers. 
+  gem 'faker'
+end
+
+group :test do
+	 # Strategies for cleaning databases in Ruby. Can be used to ensure a clean state for testing. 
+  gem 'database_cleaner'
+  # Collection of testing matchers extracted from Shoulda.
+  gem 'shoulda-matchers', '~> 3.1'
+  # factory_girl is a fixtures replacement with a straightforward definition syntax
+  gem 'factory_girl_rails'
+  # A library for generating fake data such as names, addresses, and phone numbers. 
 end
 
 group :development do
@@ -75,8 +89,6 @@ group :development do
   gem "better_errors"
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
-  # A library for generating fake data such as names, addresses, and phone numbers. 
-  gem 'faker'
   # Library for generating fake data.
   gem 'lerolero_generator'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

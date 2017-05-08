@@ -22,9 +22,11 @@ categories.each do |category|
 	Category.find_or_create_by!(description: category)
 end
 
+puts "CATEGORIAS cadastradas com sucesso!!!"
+
 ###############################################333
 
-puts "Cadastrando o Administrador padrão"
+puts "Cadastrando o ADMINISTRADOR padrão"
 
 Admin.create!(
 	name: "Administrador Geral",			
@@ -34,4 +36,16 @@ Admin.create!(
 	role: 0
 )
 
-puts "Administrador cadastrado com sucesso!!!"
+puts "ADMINISTRADOR cadastrado com sucesso!!!"
+
+###############################################333
+
+puts "Cadastrando o MEMBRO padrão"
+
+Member.create!(			
+	email: "membro@membro.com", 
+	password: "123456", 
+	password_confirmation: "123456"
+)
+
+puts "MEMBRO cadastrado com sucesso!!!"
