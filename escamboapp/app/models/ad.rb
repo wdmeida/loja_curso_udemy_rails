@@ -2,7 +2,8 @@ class Ad < ApplicationRecord
   belongs_to :category
   belongs_to :member
 
-  scope :last_six_ads, -> { limit(6).order(created_at: :desc) }
+  scope :descending_order, -> (quantity = 10) { limit(quantity).order(created_at: :desc) }
+  scope :to_the, -> (member) { where(member: member) }
 
 
   # paperclip
