@@ -32,10 +32,12 @@ gem 'jquery-ui-rails'
 source 'https://rails-assets.org' do
   # Assets bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
-  # Notifyjs
-  gem 'rails-assets-notifyjs'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
   # BootboxJS. Library for box confirmation and messages.
   gem 'rails-assets-bootbox'
+  # Animate Css
+  gem 'rails-assets-animate-css'
 end
 
 # Use sqlite3 as the database for Active Record
