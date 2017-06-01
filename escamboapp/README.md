@@ -1,24 +1,27 @@
-# README
+# Escambo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## O Projeto
 
-Things you may want to cover:
+Projeto desenvolvido durante o [Curso de Ruby on Rails Completo da Udemy](http://udemy.com/rubyonrails). O projeto consiste no desenvolvimento de uma loja virtual, simulando um Marketplace, utilizando Ruby on Rails 5.
 
-* Ruby version
+## Executando o projeto
 
-* System dependencies
+Para executar o projeto, entre no diretório 'escamboapp', no terminal e instale as dependências:
 
-* Configuration
+```$ bundle install```
 
-* Database creation
+Execute as taks de configuração inicial do projeto, já incluindo a criação e configuração da base de dados:
 
-* Database initialization
+```$ rake dev:setup```
 
-* How to run the test suite
+Após isso, inicie o servidor da aplicação:
 
-* Services (job queues, cache servers, search engines, etc.)
+```$ foreman start```
 
-* Deployment instructions
+Acesse a aplicação através do seu navegador pelo seguinte endereço:
 
-* ...
+```http://localhost:3000```
+
+### Observação
+
+O projeto ainda está em desenvolvimento...
