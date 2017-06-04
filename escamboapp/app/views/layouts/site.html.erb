@@ -26,11 +26,11 @@
 </head>
 
 <body>
-  <%= render partial: "layouts/site_shared/navigation" %>  
-  <%= yield %>
-  <%= render partial: "layouts/site_shared/footer" %>
-
-      
+    <div id="global-spin" class="loading" style="display: none;">Loading&#8230;</div>
+    <%= render partial: "layouts/site_shared/navigation" %>  
+    <%= yield %>
+    <%= render partial: "layouts/site_shared/footer" %>
+    
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'site' %>
 </body>
