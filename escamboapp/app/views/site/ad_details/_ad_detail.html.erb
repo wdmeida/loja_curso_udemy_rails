@@ -4,7 +4,7 @@
         <h4 class="pull-right"><%= humanized_money_with_symbol @ad.price %></h4>
         <h4><a href="#"><%= @ad.title -%></a>
         </h4>
-        <p><%= @ad.description %></p>
+        <p><%= @ad.description.html_safe %></p>
     </div>
     <div class="ratings">
         <p class="pull-right">3 reviews</p>

@@ -1,9 +1,14 @@
 class Ad < ApplicationRecord
+  
+  # Callback
+  before_save :md_to_html
+
+  # Associations
   belongs_to :category
   belongs_to :member
 
   # Validates
-  validates :title, :description, :category, :picture, :finish_date, presence: true 
+  validates :title, :description_md, :description_short, :category, :picture, :finish_date, presence: true 
   validates :price, numericality: { greater_than: 0 }
 
   scope :descending_order, -> (quantity = 10) { limit(quantity).order(created_at: :desc) }
@@ -16,4 +21,26 @@ class Ad < ApplicationRecord
   
   # gem money-rails (disponibility price)
   monetize :price_cents
+
+  private
+    # Convert Markdown text to HTML
+    def md_to_html
+      options = {
+      filter_html: true,
+      link_attributes: {
+        rel: "nofollow",
+        target: "_blank"
+        }
+      }
+
+      extensions = {
+        space_after_headers: true,
+        autolink: true
+      }
+
+      renderer = Redcarpet::Render::HTML.new(options)
+      markdown = Redcarpet::Markdown.new(renderer, extensions)
+
+      self.description = markdown.render(self.description_md)
+    end
 end
