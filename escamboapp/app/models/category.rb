@@ -1,4 +1,9 @@
 class Category < ApplicationRecord
+	
+	# Pretty url for description (Gem Friendly Id)
+	include FriendlyId
+	friendly_id :description, use: :slugged
+	
 	# Associations
 	has_many :ads
 
