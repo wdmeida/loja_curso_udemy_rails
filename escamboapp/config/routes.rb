@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :admins, except: [:show]  
     resources :categories, except: [:show, :destroy]
     resources :send_mail, only: [:edit, :create]
+    resources :diagrams, only: [:index]
     get 'dashboard', to: 'dashboard#index'
   end
 

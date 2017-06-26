@@ -1,5 +1,8 @@
 class Ad < ApplicationRecord
   
+  # Constants
+  QTT_PER_PAGE = 6
+
   # Callback
   before_save :md_to_html
 
@@ -11,7 +14,15 @@ class Ad < ApplicationRecord
   validates :title, :description_md, :description_short, :category, :picture, :finish_date, presence: true 
   validates :price, numericality: { greater_than: 0 }
 
-  scope :descending_order, -> (quantity = 10) { limit(quantity).order(created_at: :desc) }
+  # Scopes
+  scope :descending_order, -> (page) { 
+    order(created_at: :desc).page(page).per(QTT_PER_PAGE)
+  }
+
+  scope :search, ->(q) { 
+    where("title LIKE ?", "%#{q}%").page(page).per(QTT_PER_PAGE) 
+  }
+  
   scope :to_the, -> (member) { where(member: member) }
   scope :by_category, ->(id) { where(category: id) }
 
