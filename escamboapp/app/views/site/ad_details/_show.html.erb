@@ -6,16 +6,12 @@
         </h4>
         <p><%= @ad.description.html_safe %></p>
     </div>
+</div>
+
+<div class="well well-sm">
     <div class="ratings">
-        <p class="pull-right">3 reviews</p>
-        <p>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            4.0 stars
-        </p>
+        <p class="pull-right"><%= @ad.comments.count %> comentários</p>
+        <%= rating_for @ad, 'quality', disable_after_rate: false  %>
     </div>
 </div>
 
@@ -29,9 +25,7 @@
         </div>
     <% else %>
         <div class="text-right">
-            <button type="button" class="btn btn-success" disabled data-toggle="modal" data-target="#commentModal">
-                Efetua login para comentar
-            </button>
+            <%= link_to "Efetue login para comentar", new_member_session_path, :class => 'btn btn-success' %>
         </div>
     <% end %>
 

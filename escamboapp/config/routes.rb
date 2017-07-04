@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  post '/rate' => 'rater#create', :as => 'rate'
   root 'site/home#index'
 
   get 'backoffice', to: 'backoffice/dashboard#index'
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
       resources :ads, only: [:index, :edit, :update, :new, :create]  
     end
 
-    resources :ad_details, only: [:show]
+    resources :ad_details, only: [:index, :show]
     resources :categories, only: [:show] 
     resources :comments, only: [:create]
   end

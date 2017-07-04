@@ -3,6 +3,9 @@ class Ad < ApplicationRecord
   # Constants
   QTT_PER_PAGE = 6
 
+  # RatyRate gem
+  ratyrate_rateable 'quality'
+
   # Callback
   before_save :md_to_html
 
