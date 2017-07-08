@@ -10,8 +10,8 @@
 
 <div class="well well-sm">
     <div class="ratings">
-        <p class="pull-right"><%= @ad.comments.count %> comentários</p>
-        <%= rating_for @ad, 'quality', disable_after_rate: false  %>
+        <p class="pull-right"><%= @ad.rates('quality').count %> <%= t('labels.reviews') %></p>
+        <%= rating_for @ad, 'quality' %>
     </div>
 </div>
 
