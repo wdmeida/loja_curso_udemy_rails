@@ -40,8 +40,7 @@
       </div>
   </div>
 
-  <% flash.each do |key, value| %>
-    <script>
-      $.notify("<%= value %>", "info");
-    </script>
-  <% end %>
+<% flash.each do |key, value| %>
+  <%= javascript_tag "$.notify({ message: '#{value}' }, { type: 'danger', 
+      placement: { from: 'top', align: 'center' } } );" %>
+<% end %>
