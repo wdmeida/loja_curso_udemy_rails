@@ -32,12 +32,22 @@ class Ad < ApplicationRecord
     where(category: id).page(page).per(QTT_PER_PAGE) 
   }
 
+  scope :random, -> (quantity) { limit(quantity).order("RANDOM()") }
+
   # paperclip
   has_attached_file :picture, styles: { large: "800x300#",medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
   
   # gem money-rails (disponibility price)
   monetize :price_cents
+
+  def second
+    self[1]
+  end
+
+  def third
+    self[2]
+  end
 
   private
     # Convert Markdown text to HTML
