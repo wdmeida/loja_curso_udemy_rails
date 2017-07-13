@@ -9,13 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EscamboApp</title>
-
-    <%= csrf_meta_tags %>
+    <title><%= t('app.profile_subtitle') %></title>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= stylesheet_link_tag    'site', media: 'all' %>
-     <%= stylesheet_link_tag    'site/profile', media: 'all' %>
+    <%= stylesheet_link_tag    'site/profile', media: 'all' %>
+
+    <%= csrf_meta_tags %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,11 +27,8 @@
 </head>
 
 <body>
-  <%= render partial: "layouts/site_shared/navigation" %>  
-  
-    
-
- <div id="wrapper">
+    <%= render partial: "layouts/site_shared/navigation" %>
+    <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -48,10 +45,10 @@
                     <%= link_to "#{t('profile_menu.my_ads')}", site_profile_ads_path %>
                 </li>
                 <li>
-                    <%= link_to "#{t('profile_menu.new_ad')}", new_site_profile_ad_path %>    
+                    <%= link_to "#{t('profile_menu.new_ad')}", new_site_profile_ad_path %>
                 </li>
                 <li>
-                    <%= link_to "#{t('profile_menu.my_data')}", edit_site_profile_my_datum_path(current_member) %>    
+                    <%= link_to "#{t('profile_menu.my_data')}", edit_site_profile_my_datum_path(current_member.id) %>
                 </li>
             </ul>
         </div>
@@ -78,8 +75,8 @@
     <%#= javascript_include_tag 'site/profile/ads' %>
 
     <%= yield :javascripts %>
-    
-    <%= render partial: 'layouts/shared/notifications' %>
+
+    <%= render partial: 'layouts/shared/notifications'  %>
 </body>
 
 </html>

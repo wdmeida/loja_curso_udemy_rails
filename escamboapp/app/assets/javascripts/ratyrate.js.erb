@@ -3,7 +3,6 @@ $.fn.raty.defaults.halfShow = true;
 $.fn.raty.defaults.path = "/assets";
 $.fn.raty.defaults.cancel = false;
 
-// Verifica se a página ou o ajax foi completamente carregado.
 $(document).bind('ready ajaxComplete',function(){
   $(".star").each(function() {
     var $readonly = ($(this).attr('data-readonly') == 'true');

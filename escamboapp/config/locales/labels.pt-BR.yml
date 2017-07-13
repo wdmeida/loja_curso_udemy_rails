@@ -16,7 +16,11 @@
     comments: Comentários
     review: Avaliação
     reviews: Avaliações
-    login_to_comment: Efetua login para comentar
+    login_to_comment: Efetue login para comentar
     er_diagram: Diagrama ER
     forgot_password: Esqueceu sua senha?
+    dont_have_an_account: Não tem uma conta?
+    sign_up: Cadastre-se
+    sign_up_here: Cadastre-se aqui!
+    sign_in_with_facebook: Login com Facebook
 

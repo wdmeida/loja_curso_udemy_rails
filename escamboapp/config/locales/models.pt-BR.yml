@@ -2,7 +2,7 @@
   helpers:
     label:
       member[profile_member_attributes]:
-        first_name: Nome
+        first_name: Primeiro Nome
         second_name: Segundo Nome
   activerecord:
     models:
@@ -18,6 +18,9 @@
       ad:
         one: Anúncio
         other: Anúncios
+      profile_member:
+        one: Perfil
+        other: Perfil
     attributes:
       member:
         id: Código
@@ -25,18 +28,20 @@
         updated_at: Atualizado em
         email: E-mail
         password: Senha
-        password_confirmation: Confirmação de Senha
+        password_confirmation: Confirmação de senha
       admin:
         id: Código
         created_at: Criado em
         updated_at: Atualizado em
         email: E-mail
         password: Senha
-        password_confirmation: Confirmação de Senha
-        role: Perfil
+        password_confirmation: Confirmação de senha
         name: Nome
+        role: Tipo de Acesso
       category:
         id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
         description: Descrição
       ad:
         id: Código
@@ -48,6 +53,7 @@
         description_short: Breve Descrição
         member_id: Código do usuário
         category_id: Código da categoria
+        category: Categoria
         finish_date: Data de finalização
         image: Imagem
         price: Preço
@@ -55,7 +61,7 @@
         id: Código
         created_at: Criado em
         updated_at: Atualizado em
-        first_name: Nome
-        second_name: Sobrenome
-        birthdate: Data de Nascimento
+        first_name: Primeiro nome
+        second_name: Segundo nome
+        birthdate: Data de nascimento
 
