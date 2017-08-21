@@ -32,7 +32,13 @@ class Ad < ApplicationRecord
     where(category: id).page(page).per(QTT_PER_PAGE) 
   }
 
-  scope :random, -> (quantity) { limit(quantity).order("RANDOM()") }
+  scope :random, -> (quantity) { 
+    if Rails.env.production?
+      limit(quantity).order("RAND()") # MySQL
+    else
+      limit(quantity).order("RANDOM()") # SQLite 
+    end
+  }
 
   # paperclip
   has_attached_file :picture, styles: { large: "800x300#",medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
