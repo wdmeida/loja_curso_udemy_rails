@@ -61,6 +61,8 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 # A Ruby Gem that wraps the functionality of jQuery Raty library, and provides optional IMDB style rating.
 gem 'ratyrate'
+# Biblioteca de integração em Ruby
+gem "pagseguro-oficial", "~> 2.5.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -128,6 +130,8 @@ group :development do
   gem 'capistrano-rvm'
   # Unicorn support for Capistrano 3.
   gem 'capistrano3-unicorn'
+  # Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :production do

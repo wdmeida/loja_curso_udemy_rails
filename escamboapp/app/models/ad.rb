@@ -1,5 +1,10 @@
 class Ad < ApplicationRecord
   
+  # Statuses 
+  enum :status => [ :active,
+                    :processing,
+                    :sold ]
+
   # Constants
   QTT_PER_PAGE = 6
 

@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   get 'backoffice', to: 'backoffice/dashboard#index'
   
+  namespace :checkout do
+    resources :payments, only: [:create]
+    resources :notifications, only: [:create]
+  end
+
   namespace :backoffice do
     resources :admins, except: [:show]  
     resources :categories, except: [:show, :destroy]
