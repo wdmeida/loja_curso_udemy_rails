@@ -28,11 +28,11 @@ class Ad < ApplicationRecord
     order(created_at: :desc).page(page).per(QTT_PER_PAGE)
   }
 
-  scope :search, ->(q) { 
+  scope :search, ->(q, page) { 
     where("title LIKE ?", "%#{q}%").page(page).per(QTT_PER_PAGE) 
   }
   
-  scope :to_the, -> (member) { where(member: member) }
+  scope :to_the, -> (member, page) { where(member: member) }
   scope :by_category, ->(id, page) { 
     where(category: id).page(page).per(QTT_PER_PAGE) 
   }
