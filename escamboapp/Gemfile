@@ -68,6 +68,8 @@ gem 'prawn-rails'
 # PDF generator (from HTML) plugin for Ruby on Rails 
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+# Create beautiful JavaScript charts with one line of Ruby https://www.chartkick.com
+gem 'chartkick'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
