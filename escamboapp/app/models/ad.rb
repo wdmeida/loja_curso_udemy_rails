@@ -1,5 +1,8 @@
 class Ad < ApplicationRecord
   
+  # Searchkick Gem (Elasticsearch)
+  # searchkick  
+  
   # Statuses 
   enum :status => [ :active,
                     :processing,
