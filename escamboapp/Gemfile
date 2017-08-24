@@ -70,6 +70,8 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 # Create beautiful JavaScript charts with one line of Ruby https://www.chartkick.com
 gem 'chartkick'
+#  Simple, efficient background processing for Ruby http://sidekiq.org
+gem 'sidekiq'
 
 # Intelligent search made easy with Rails and Elasticsearch
 # gem 'searchkick'

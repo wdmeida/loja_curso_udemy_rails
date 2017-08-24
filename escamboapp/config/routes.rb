@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  require "sidekiq/web"
+  mount Sidekiq::Web => '/sidekiq'
+
   post '/rate' => 'rater#create', :as => 'rate'
   root 'site/home#index'
 
