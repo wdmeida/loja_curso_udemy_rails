@@ -63,6 +63,8 @@ gem 'kaminari-i18n'
 gem 'ratyrate'
 # Biblioteca de integração em Ruby
 gem "pagseguro-oficial", "~> 2.5.0"
+# Prawn Handler for Rails. Handles and registers pdf formats.
+gem 'prawn-rails'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
