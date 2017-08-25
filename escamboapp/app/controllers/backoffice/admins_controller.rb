@@ -19,7 +19,8 @@ class Backoffice::AdminsController < BackofficeController
 
   def create
   	@admin = Admin.new(params_admin)
-  	
+  	update_roles
+
   	if @admin.save
   		redirect_to backoffice_admins_path, notice: I18n.t('messages.created_with', :item => @admin.email)
   	else
@@ -31,6 +32,7 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def update
+    update_roles
 
   	if @admin.update(params_admin)      
       # Lembrar de alterar depois para executar com um background job.
@@ -53,6 +55,20 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   private
+
+    def remove_all_roles
+      Role.availables.each do |role|
+        @admin.remove_role(role)
+      end
+    end
+
+    def update_roles
+      remove_all_roles
+      roles = params[:admins].extract!(:role_ids)
+      roles[:role_ids].each do |role|
+        @admin.add_role(role)
+      end
+    end
 
 	  def set_admin
 	  	@admin = Admin.find(params[:id])

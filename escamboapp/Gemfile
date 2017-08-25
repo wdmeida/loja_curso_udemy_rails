@@ -72,6 +72,8 @@ gem 'wkhtmltopdf-binary'
 gem 'chartkick'
 #  Simple, efficient background processing for Ruby http://sidekiq.org
 gem 'sidekiq'
+# Role management library with resource scoping
+gem 'rolify'
 
 # Intelligent search made easy with Rails and Elasticsearch
 # gem 'searchkick'
